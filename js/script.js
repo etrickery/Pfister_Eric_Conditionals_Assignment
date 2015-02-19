@@ -22,12 +22,15 @@ var atomicWeight;
 var numProtons;
 var numNeutrons;
 var numElectrons;
-var massNumber;
 var information;
 
 //massNumber = rounded atomicWeight = numProtons + numNeutrons
 //atomicNumber = numProtons = numElectrons
 //
+console.log("This script will investigate some properties of an element found in the periodic table.");
+element = prompt("Please enter the element you wish to investigate: ", "Oxygen");
+atomicNumber = prompt("Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: ", "8");
+atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ", "16")
 
 if (atomicNumber = "1") {   //This conditional will load an informational quote into the variable information
     information = ("The most abundant chemical in the universe, Hydrogen has only one proton and neutron.");
@@ -38,6 +41,8 @@ if (atomicNumber = "1") {   //This conditional will load an informational quote 
         information = ("Alkali Metals are among the most reactive metals. They produce a strong reaction to water, and can even explode upon contact!");
     }
 }
+
+console.log(information);
 
 //ternary operators:
 //(condition) ? do if true : do if false;
