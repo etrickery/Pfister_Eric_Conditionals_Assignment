@@ -52,7 +52,7 @@ if (atomicNumber == 1) {   //This conditional will load an informational quote i
                 //Determine if the element is a Lanthanide
                 information = ("Lanthanides are used in the production of glass, magnets and other important materials.");
             } else {
-                if (atomicNumber >= 89 && atomicNumber <+ 103) {
+                if (atomicNumber >= 89 && atomicNumber <= 103) {
                     //determine if the element is a actinide
                     information = ("Actinides are all radioactive and the heavier elements are extremely unstable and do not occur in nature.");
                 } else {
@@ -60,7 +60,10 @@ if (atomicNumber == 1) {   //This conditional will load an informational quote i
                         //determine if the element is a transition metal
                         information = ("Transitional Metals can be disolved into water to form aqueous solutions. The element can be recovered by allowing the water to evaporate.");
                     } else {
-                        if ()
+                        if ((atomicNumber == 13)||(atomicNumber == 31)||(atomicNumber == 49)||(atomicNumber == 50)||(atomicNumber >= 81 && atomicNumber <= 83)||(atomicNumber >= 113 && atomicNumber <= 116)) {
+                            //determine if the element is a post-transition metal
+                            information = ("")
+                        }
                     }
                 }
             }
