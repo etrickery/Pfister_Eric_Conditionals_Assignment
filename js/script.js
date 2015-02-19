@@ -7,36 +7,33 @@ Conditionals Assignment
 
 */
 
-//requirements:
-//2 different mathmatical operators (+-/*)
+
 //2 different conditionals (one must contain else statement)
-//at least one ternary
+//at least one ternary ((condition) ? do if true : do if false;)
 //at least one logical operator (&&, ||, or !)
 //at least three user inputs used in calculations
 //all prompts must be validated
 //flowchart
 
-var element;
-var atomicNumber;
-var atomicWeight;
-var numProtons;
-var numNeutrons;
-var numElectrons;
+var element;        //user input of name of element
+var atomicNumber;   //user input atomic number
+var atomicWeight;   //user input atomic weight
+var numProtons;     //calculated number of protons
+var numNeutrons;    //calculated number of neutrons
+var numElectrons;   //calculated number of electrons
 var information = "That is not an element known to science.";
-var numQuarks;
+var numQuarks;      //calculated number of quarks
 
-//massNumber = rounded atomicWeight = numProtons + numNeutrons
-//atomicNumber = numProtons = numElectrons
-
+//State the objective of the script and prompt for each user input value
 console.log("This script will investigate some properties of an element found in the periodic table.");
 element = prompt("Please enter the element you wish to investigate: ", "Oxygen");
 atomicNumber = prompt("Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: ", 8);
 atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ", 16);
 
-numProtons = atomicNumber;
-numNeutrons = atomicWeight - atomicNumber;
-numElectrons = atomicWeight - numProtons;
-numQuarks = (numProtons + numNeutrons) * (3);
+numProtons = atomicNumber;                      //calculate number of Protons
+numNeutrons = atomicWeight - atomicNumber;      //calculate number of Neutrons
+numElectrons = atomicWeight - numProtons;       //calculate number of electrons
+numQuarks = (numProtons + numNeutrons) * (3);   //calculate number of quarks
 
 //Display the following concatenated statements detailing the user's inputs and some basic information
 console.log("You have selected the element, " + (element) + ", which has the atomic number " + (atomicNumber) + " and atomic weight " + (atomicWeight) + ".");
@@ -103,8 +100,7 @@ if (atomicNumber == 1) {   //This conditional will load an informational quote i
 
 console.log(information);
 
-//ternary operators:
-//(condition) ? do if true : do if false;
+
 
 
 
