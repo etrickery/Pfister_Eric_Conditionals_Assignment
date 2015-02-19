@@ -23,6 +23,7 @@ var numProtons;
 var numNeutrons;
 var numElectrons;
 var information = "That is not an element known to science.";
+var numQuarks;
 
 //massNumber = rounded atomicWeight = numProtons + numNeutrons
 //atomicNumber = numProtons = numElectrons
@@ -30,11 +31,24 @@ var information = "That is not an element known to science.";
 console.log("This script will investigate some properties of an element found in the periodic table.");
 element = prompt("Please enter the element you wish to investigate: ", "Oxygen");
 atomicNumber = prompt("Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: ", 8);
-atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ", 16)
+atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ", 16);
 
 numProtons = atomicNumber;
 numNeutrons = atomicWeight - atomicNumber;
 numElectrons = atomicWeight - numProtons;
+numQuarks = (numProtons + numNeutrons) * (3);
+
+//Display the following concatenated statements detailing the user's inputs and some basic information
+console.log("You have selected the element, " + (element) + ", which has the atomic number " + (atomicNumber) + " and atomic weight " + (atomicWeight) + ".");
+console.log("Within the nucleus of " + (element) + " atoms, there are " + (numProtons) + " protons, " + (numNeutrons) + " neutrons, " + (numElectrons) + " electrons.");
+console.log("Making up protons and neutrons, Quarks are smaller particles that determine the spin or polarity of the larger particles. \nWithin " + (element) + " atoms, there are " + (numQuarks) + " quarks, three in each proton or neutron.");
+
+
+/*
+Without a database or array containing the entire periodic table, I wanted to make some kind of information display to
+give the impression of smarter software. This also satisfied the use of various operators and other assignment
+conditions (assuming I have understood the expectations detailed in the rubric).
+ */
 
 if (atomicNumber == 1) {   //This conditional will load an informational quote into the variable information
     information = ("The most abundant chemical in the universe, Hydrogen has only one proton and neutron.");
@@ -62,7 +76,22 @@ if (atomicNumber == 1) {   //This conditional will load an informational quote i
                     } else {
                         if ((atomicNumber == 13)||(atomicNumber == 31)||(atomicNumber == 49)||(atomicNumber == 50)||(atomicNumber >= 81 && atomicNumber <= 83)||(atomicNumber >= 113 && atomicNumber <= 116)) {
                             //determine if the element is a post-transition metal
-                            information = ("")
+                            information = ("Post-Transition Metals are used to make displays, Pepto-Bismol, and are some of the most common metals in the Earth's crust.");
+                        } else {
+                            if ((atomicNumber >= 6 && atomicNumber <= 8)||(atomicNumber = 15)||(atomicNumber = 16)||(atomicNumber = 34)) {
+                                //determine if the element is a nonmetal
+                                information = ("Like Hydrogen, Nonmetals are mostly gases, and include the building blocks of life on Earth.");
+                            } else {
+                                if ((atomicNumber == 9)||(atomicNumber == 17)||(atomicNumber == 35)||(atomicNumber == 53)||(atomicNumber == 85)||(atomicNumber == 117)) {
+                                    //determine if the element is a halogen
+                                    information = ("Toxic and nonmetallic, these elements are used as disinfectants and form acids when bonded to Hydrogen.");
+                                } else {
+                                    if ((atomicNumber = 2)||(atomicNumber = 10)||(atomicNumber = 18)||(atomicNumber = 36)||(atomicNumber = 54)||(atomicNumber = 86)||(atomicNumber = 118)) {
+                                        //determine if the element is a noble gas
+                                        information = ("The Noble Gases are inert, meaning they are not reactive, and they rarely combine with other elements.")
+                                    }
+                                }
+                            }
                         }
                     }
                 }
