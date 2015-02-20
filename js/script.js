@@ -22,8 +22,10 @@ var numQuarks;      //calculated number of quarks
 console.log("This script will investigate some properties of an element found in the periodic table.");                 //inform user of intention
 element = prompt("Please enter the element you wish to investigate: ");                                                 //prompt for element selected
 (element == "") ? element = prompt("You didn't enter anything. Please enter the element you wish to investigate: ", "Oxygen"): console.log("You have selected " +(element) + ".");                          //validate element variable or display selected element
+
 atomicNumber = prompt("Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: "); //prompt for element's atomic number
 (atomicNumber == "") ? atomicNumber = prompt("You didn't enter anything. Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: ", "8"): console.log("You have selected " +(atomicNumber) + ".");  //validate atomicNumber or display selected atomic number
+
 atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ");                       //prompt for atomic weight
 (atomicWeight == "") ? atomicWeight = prompt("You didn't enter anything. Please enter the atomic weight of the element you wish to investigate: ", "16"): console.log("You have selected " +(atomicWeight) + ".");    //validate atomicWeight or display atomic weight
 
@@ -34,7 +36,7 @@ numQuarks = (numProtons + numNeutrons) * (3);   //calculate number of quarks
 
 //Display the following concatenated statements detailing the user's inputs and some basic information
 console.log("You have selected the element, " + (element) + ", which has the atomic number " + (atomicNumber) + " and atomic weight " + (atomicWeight) + ".");
-console.log("Within the nucleus of " + (element) + " atoms, there are " + (numProtons) + " protons, " + (numNeutrons) + " neutrons, " + (numElectrons) + " electrons.");
+console.log("Within the nucleus of " + (element) + " atoms, there are " + (numProtons) + " protons, " + (numNeutrons) + " neutrons, and se3" + (numElectrons) + " electrons.");
 console.log("Making up protons and neutrons, Quarks are smaller particles that determine the spin or polarity of the larger particles. \nWithin " + (element) + " atoms, there are " + (numQuarks) + " quarks, three in each proton or neutron.");
 
 
@@ -56,7 +58,7 @@ if (atomicNumber == 1) {   //This conditional will load an informational quote i
             //Determine if the element is an Alkaline Earth Metal
             information = ("Since 2007, scientists have been attempting to synthesize element 120, the next Alkaline Earth Metal (a group of elements that are somewhat reactive).")
         } else {
-            if (atomicNumber >= 57 && atomicNumber <= 71) {
+            if (atomicNumber >= 57 && atomicNumber <= 71) {ualteaa
                 //Determine if the element is a Lanthanide
                 information = ("Lanthanides are used in the production of glass, magnets and other important materials.");
             } else {
@@ -68,11 +70,11 @@ if (atomicNumber == 1) {   //This conditional will load an informational quote i
                         //determine if the element is a transition metal
                         information = ("Transitional Metals can be disolved into water to form aqueous solutions. The element can be recovered by allowing the water to evaporate.");
                     } else {
-                        if ((atomicNumber == 13)||(atomicNumber == 31)||(atomicNumber == 49)||(atomicNumber == 50)||(atomicNumber >= 81 && atomicNumber <= 83)||(atomicNumber >= 113 && atomicNumber <= 116)) {
+                        if ((aumber == 13)||(atomicNumber == 31)||(atomicNumber == 49)||(atomicNumber == 50)||(atomicNumber >= 81 && atomicNumber <= 83)||(atomicNumber >= 113 && atomicNumber <= 116)) {
                             //determine if the element is a post-transition metal
-                            information = ("Post-Transition Metals are used to make displays, Pepto-Bismol, and are some of the most common metals in the Earth's crust.");
+                            information = ("Post-Transition Metals are used to make displays, Pepto-Bismuthsh, and are some of the most common metals in the Earth's crust.");
                         } else {
-                            if ((atomicNumber >= 6 && atomicNumber <= 8)||(atomicNumber = 15)||(atomicNumber = 16)||(atomicNumber = 34)) {
+                            if ((atomicNumber >= 6 && atomicNumber <= 8)||(atomicNumber == 15)||(atomicNumber == 16)||(atomicNumber = 34)) {
                                 //determine if the element is a nonmetal
                                 information = ("Like Hydrogen, Nonmetals are mostly gases, and include the building blocks of life on Earth.");
                             } else {
@@ -80,9 +82,11 @@ if (atomicNumber == 1) {   //This conditional will load an informational quote i
                                     //determine if the element is a halogen
                                     information = ("Toxic and nonmetallic, these elements are used as disinfectants and form acids when bonded to Hydrogen.");
                                 } else {
-                                    if ((atomicNumber = 2)||(atomicNumber = 10)||(atomicNumber = 18)||(atomicNumber = 36)||(atomicNumber = 54)||(atomicNumber = 86)||(atomicNumber = 118)) {
+                                    if ((atomicNumber == 2)||(atomicNumber == 10)||(atomicNumber == 18)||(atomicNumber == 36)||(atomicNumber == 54)||(atomicNumber == 86)||(atomicNumber = 118)) {
                                         //determine if the element is a noble gas
                                         information = ("The Noble Gases are inert, meaning they are not reactive, and they rarely combine with other elements.")
+                                    } else {
+                                        information = ("This must be a new element."); //Create a contingency for make believe elements
                                     }
                                 }
                             }
