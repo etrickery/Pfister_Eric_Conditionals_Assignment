@@ -7,14 +7,6 @@ Conditionals Assignment
 
 */
 
-
-//2 different conditionals (one must contain else statement)
-//at least one ternary ((condition) ? do if true : do if false;)
-//at least one logical operator (&&, ||, or !)
-//at least three user inputs used in calculations
-//all prompts must be validated
-//flowchart
-
 var element;        //user input of name of element
 var atomicNumber;   //user input atomic number
 var atomicWeight;   //user input atomic weight
@@ -24,11 +16,16 @@ var numElectrons;   //calculated number of electrons
 var information = "That is not an element known to science.";
 var numQuarks;      //calculated number of quarks
 
+
+
 //State the objective of the script and prompt for each user input value
-console.log("This script will investigate some properties of an element found in the periodic table.");
-element = prompt("Please enter the element you wish to investigate: ", "Oxygen");
-atomicNumber = prompt("Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: ", 8);
-atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ", 16);
+console.log("This script will investigate some properties of an element found in the periodic table.");                 //inform user of intention
+element = prompt("Please enter the element you wish to investigate: ");                                                 //prompt for element selected
+(element == "") ? element = prompt("You didn't enter anything. Please enter the element you wish to investigate: ", "Oxygen");                          //validate element variable
+atomicNumber = prompt("Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: "); //prompt for element's atomic number
+(atomicNumber == "") ? atomicNumber = prompt("You didn't enter anything. Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: ", "8");  //validate atomicNumber
+atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ");                       //prompt for atomic weight
+(atomicWeight == "") ? atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ");    //validate atomicWeight
 
 numProtons = atomicNumber;                      //calculate number of Protons
 numNeutrons = atomicWeight - atomicNumber;      //calculate number of Neutrons
@@ -98,9 +95,27 @@ if (atomicNumber == 1) {   //This conditional will load an informational quote i
 
 }
 
-console.log(information);
+console.log(information);   //Display the results of the information variable determined via the above conditional
 
 
+
+/*
+Here are some elements to try, in order to test the script functionality...
+
+Element         Atomic Number           Atomic Weight(input the Mass Number, not the Atomic Weight = rounded Atomic Weight)
+Hydrogen            1                       1
+Sodium              11                      23
+Calcium             20                      40
+Copper              29                      64
+Aluminum            13                      27
+Sulfur              16                      32
+Krypton             36                      84
+Neodymium           60                      144
+Uranium             92                      238
+
+These elements will return results from "information" from each of the nested conditionals
+
+ */
 
 
 
