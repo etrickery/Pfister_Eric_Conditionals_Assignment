@@ -21,11 +21,11 @@ var numQuarks;      //calculated number of quarks
 //State the objective of the script and prompt for each user input value
 console.log("This script will investigate some properties of an element found in the periodic table.");                 //inform user of intention
 element = prompt("Please enter the element you wish to investigate: ");                                                 //prompt for element selected
-(element == "") ? element = prompt("You didn't enter anything. Please enter the element you wish to investigate: ", "Oxygen");                          //validate element variable
+(element == "") ? element = prompt("You didn't enter anything. Please enter the element you wish to investigate: ", "Oxygen"): console.log("You have selected " +(element) + ".");                          //validate element variable or display selected element
 atomicNumber = prompt("Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: "); //prompt for element's atomic number
-(atomicNumber == "") ? atomicNumber = prompt("You didn't enter anything. Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: ", "8");  //validate atomicNumber
+(atomicNumber == "") ? atomicNumber = prompt("You didn't enter anything. Please enter the Atomic Number (rounded mass number) of the element you wish to investigate: ", "8"): console.log("You have selected " +(atomicNumber) + ".");  //validate atomicNumber or display selected atomic number
 atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ");                       //prompt for atomic weight
-(atomicWeight == "") ? atomicWeight = prompt("Please enter the atomic weight of the element you wish to investigate: ");    //validate atomicWeight
+(atomicWeight == "") ? atomicWeight = prompt("You didn't enter anything. Please enter the atomic weight of the element you wish to investigate: ", "16"): console.log("You have selected " +(atomicWeight) + ".");    //validate atomicWeight or display atomic weight
 
 numProtons = atomicNumber;                      //calculate number of Protons
 numNeutrons = atomicWeight - atomicNumber;      //calculate number of Neutrons
